@@ -102,8 +102,8 @@ CREATE TABLE `subscriberstable` (
   `idSubscribers` int(11) NOT NULL,
   `subscriberName` text NOT NULL,
   `subscriberEmail` int(11) NOT NULL,
-  `subscriberMonthly` tinyint(1) NOT NULL,
-  `subscriberBreaking` tinyint(1) NOT NULL
+  `subscriberMonthly` tinyint(1),
+  `subscriberBreaking` tinyint(1)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
