@@ -35,11 +35,10 @@
 			<table class="table bg-success" style="margin-top:20px;">
 				<thead>
 				<th>ID</th>
-                <th>Subscriber</th>
-                <th>Lifespan</th>
-                <th>Nationality</th>
-                <th>Artist</th>
-                <th>Actions</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Monthly</th>
+                <th>Breaking</th>
 				</thead>
 				<tbody>
 					<?php
@@ -49,19 +48,15 @@
 						$database = new Connection();
     					$db = $database->open();
 						try{	
-						    $sql = 'SELECT * FROM artisttable';
+						    $sql = 'SELECT * FROM subscriberstable';
 						    foreach ($db->query($sql) as $row) {
 						    	?>
 						    	<tr>
-						    		<td><?php echo $row['idArtist']; ?></td>
-						    		<td><?php echo $row['artistName']; ?></td>
-						    		<td><?php echo $row['artistBirth'];?> - <?php echo $row['artistDeath'];?></td>
-                                    <td><?php echo $row['artistNationality'];?></td>
-                                    <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
-						    		 <td>
-						    			<a href="#editartist_<?php echo $row['idArtist'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
-						    			<a href="#deleteartist_<?php echo $row['idArtist']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
-						    		</td>
+						    		<td><?php echo $row['idSubscribers']; ?></td>
+						    		<td><?php echo $row['subscriberName']; ?></td>
+                                    <td><?php echo $row['subscriberEmail'];?></td>
+						    		<td><?php echo $row['subscriberMonthly']; ?></td>
+						    		<td><?php echo $row['subscriberBreaking']; ?></td>
 						    	</tr>
 						    	<?php 
 						    }
