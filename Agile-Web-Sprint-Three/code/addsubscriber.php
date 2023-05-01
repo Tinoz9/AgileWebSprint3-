@@ -1,3 +1,6 @@
+<script>
+    console.log("Here-SQL");
+</script>
 <?php
 	session_start();
 	include_once('connection.php');
