@@ -7,7 +7,7 @@
 		try{
 			$type1=$_POST['subscriberEmail'];
 			$query="DELETE FROM subscriberstable 
-    		WHERE subscriberEmail = (:subscriberEmail)";
+    		WHERE subscriberEmail = '$type1'";
 			$step=$db->prepare($query);
 			$step->bindParam(':subscriberEmail',$type1,PDO::PARAM_INT, 20);
 			if($step->execute()){
