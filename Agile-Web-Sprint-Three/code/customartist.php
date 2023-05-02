@@ -29,8 +29,8 @@ include_once('navbar.php');
                 }
             ?>
             <?php
-            include('addartistmodal.php');
-             ?>
+            	include('addartistmodal.php');
+			?>
 			</div>
 			<table class="table bg-success" style="margin-top:20px;">
 				<thead>
