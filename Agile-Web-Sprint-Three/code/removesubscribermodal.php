@@ -14,34 +14,10 @@
                     <form method="POST" action="removesubscriber.php" enctype="multipart/form-data">
                         <div class="row form-group" style="margin-bottom:0.8rem;">
                             <div class="col-sm-4">
-                                <label class="control-label" style="position: relative; top: 7px;">Subscriber Name:</label>
-                            </div>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" name = "subscriberName">
-                            </div>
-                        </div>
-                        <div class="row form-group" style="margin-bottom:0.8rem;">
-                            <div class="col-sm-4">
                                 <label class="control-label" style="position: relative; top: 7px;">Subscriber Email:</label>
                             </div>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name = "subscriberEmail">
-                            </div>
-                        </div>
-                        <div class="row form-group" style="margin-bottom:0.8rem;">
-                            <div class="col-sm-4">
-                                <label class="control-label" style="position: relative; top: 7px;">Subscriber Monthly:</label>
-                            </div>
-                            <div class="col-sm-8" style="margin-bottom:0.8rem;">
-                                <input type="checkbox" name = "subscriberMonthly" value="1">
-                            </div>
-                        </div>
-                        <div class="row form-group" style="margin-bottom:0.8rem;">
-                            <div class="col-md-4">
-                                <label class="control-label" style="position: relative; top: 7px;">Subscriber Breaking:</label>
-                            </div>
-                            <div class="col-md-8" style="margin-bottom:0.8rem;">
-                                <input type="checkbox" name = "subscriberBreaking" value="1">
                             </div>
                         </div>
                         <div class="modal-footer" style="margin-bottom:0.8rem;">

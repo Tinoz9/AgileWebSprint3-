@@ -47,13 +47,13 @@
                             foreach ($db->query($sql) as $row) {
                                 ?>
                                 <tr>
-                                    <td><?php echo $row['idSubscribers']; ?></td>
+                                    <td><?php echo $row['idSubscriber']; ?></td>
                                     <td><?php echo $row['subscriberName']; ?></td>
                                     <td><?php echo $row['subscriberEmail'];?></td>
                                     <td><?php echo $row['subscriberMonthly']; ?></td>
                                     <td><?php echo $row['subscriberBreaking']; ?></td>
 									<td>
-						    			<a href="#editartist_<?php echo $row['idSubscriber'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
+						    			<a href="#editsubscriber_<?php echo $row['idSubscriber'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
 						    			<a href="#deletesubscriber_<?php echo $row['idSubscriber']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
 						    		</td>
                                     <?php

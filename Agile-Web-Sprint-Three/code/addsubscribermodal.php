@@ -25,7 +25,7 @@
                                 <label class="control-label" style="position: relative; top: 7px;">Subscriber Email:</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name = "subscriberEmail">
+                                <input type="email" class="form-control" name = "subscriberEmail" required>
                             </div>
                         </div>
                         <div class="row form-group" style="margin-bottom:0.8rem;">
@@ -33,7 +33,7 @@
                                 <label class="control-label" style="position: relative; top: 7px;">Subscriber Monthly:</label>
                             </div>
                             <div class="col-sm-8" style="margin-bottom:0.8rem;">
-                                <input type="checkbox" name = "subscriberMonthly" value="1">
+                                <input type="checkbox" name = "subscriberMonthly" value="1" checked="checked">
                             </div>
                         </div>
                         <div class="row form-group" style="margin-bottom:0.8rem;">
@@ -41,7 +41,7 @@
                                 <label class="control-label" style="position: relative; top: 7px;">Subscriber Breaking:</label>
                             </div>
                             <div class="col-md-8" style="margin-bottom:0.8rem;">
-                                <input type="checkbox" name = "subscriberBreaking" value="1">
+                                <input type="checkbox" name = "subscriberBreaking" value="1" checked="checked">
                             </div>
                         </div>
                         <div class="modal-footer" style="margin-bottom:0.8rem;">

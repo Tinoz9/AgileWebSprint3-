@@ -5,11 +5,11 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-			$type1=$_POST['subscriberName'];
+			$type1=$_POST['subscriberEmail'];
 			$query="DELETE FROM subscriberstable 
-    		WHERE subscriberName = (:subscriberName)";
+    		WHERE subscriberEmail = (:subscriberEmail)";
 			$step=$db->prepare($query);
-			$step->bindParam(':subscriberName',$type1,PDO::PARAM_INT, 20);
+			$step->bindParam(':subscriberEmail',$type1,PDO::PARAM_INT, 20);
 			if($step->execute()){
                $_SESSION['message'] = 'Subscriber Deleted successfully';
 			}

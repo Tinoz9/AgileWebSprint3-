@@ -99,9 +99,9 @@ INSERT INTO `paintingstable` (`idPaintings`, `title`, `finished`, `media`, `arti
 --
 
 CREATE TABLE `subscriberstable` (
-  `idSubscribers` int(11) NOT NULL,
+  `idSubscriber` int(11) NOT NULL,
   `subscriberName` text NOT NULL,
-  `subscriberEmail` int(11) NOT NULL,
+  `subscriberEmail` text NOT NULL,
   `subscriberMonthly` tinyint(1),
   `subscriberBreaking` tinyint(1)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -126,7 +126,7 @@ ALTER TABLE `paintingstable`
 -- Indexes for table `subscriberstable`
 --
 ALTER TABLE `subscriberstable`
-  ADD PRIMARY KEY (`idSubscribers`);
+  ADD PRIMARY KEY (`idSubscriber`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -142,7 +142,7 @@ ALTER TABLE `artisttable`
 -- AUTO_INCREMENT for table `subscriberstable`
 --
 ALTER TABLE `subscriberstable`
-  MODIFY `idSubscribers` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idSubscriber` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

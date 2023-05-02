@@ -63,11 +63,11 @@ include_once('navbar.php');
 						    			<a href="#deleteartist_<?php echo $row['idArtist']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
 						    		</td>
                                     <?php
-                                     include('editartistmodal.php');
+										include('editartistmodal.php');
                                     ?>
                                     <?php
-                                    include('deleteartistmodal.php');
-						    		 ?>
+                                    	include('deleteartistmodal.php');
+									?>
 						    	</tr>
 						    	<?php 
 						    }

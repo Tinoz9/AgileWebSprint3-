@@ -6,7 +6,7 @@
             </div>
             <div class="modal-body">	
             	<p class="text-center">Are you sure you want to Delete</p>
-				<h2 class="text-center"><?php echo 'Subscriber ' .$row['subscriberName'].' from '.$row['subscriberEmail']; ?></h2>
+				<h2 class="text-center"><?php echo 'Subscriber ' .$row['subscriberName'].' from '.$row['subscriberEmails']; ?></h2>
 			</div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>

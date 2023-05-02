@@ -14,8 +14,11 @@
 		<div class="container">
 			<h1 class="page-header text-center">Select Appropriate Button to Make Changes in Subscriber Details</h1>
 			<div class="row">
-				<div class="col-sm">
+				<div class="col-sm-10">
 					<a href="#addsubscriberModal" role="button" class="btn btn-lg btn-success" data-bs-toggle="modal" position="absolute"><span><i class="fa fa-plus"></i></span>   SUBSCRIBE</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="#removesubscriberModal" role="button" class="btn btn-lg btn-success" data-bs-toggle="modal"><span><i class="fa fa-minus"></i></span>   UNSUBSCRIBE</a>
 				</div>
 				<?php 
 					session_start();
