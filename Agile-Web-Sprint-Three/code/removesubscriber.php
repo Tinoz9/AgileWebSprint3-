@@ -29,6 +29,6 @@
 		$_SESSION['message'] = 'Fill up form first';
 	}
 
-	header('location: unsubscribe.php');
+	header('location: customsubscriber.php');
 	
 ?>

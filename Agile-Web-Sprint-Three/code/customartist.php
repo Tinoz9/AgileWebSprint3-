@@ -58,7 +58,7 @@ include_once('navbar.php');
 						    		<td><?php echo $row['artistBirth'];?> - <?php echo $row['artistDeath'];?></td>
                                     <td><?php echo $row['artistNationality'];?></td>
                                     <td><?php echo '<img src = "data:image/png;base64,' . base64_encode($row['imageArtist']) . '" width = "200px" height = "200px"/>';?></td>
-						    		 <td>
+									<td>
 						    			<a href="#editartist_<?php echo $row['idArtist'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
 						    			<a href="#deleteartist_<?php echo $row['idArtist']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
 						    		</td>

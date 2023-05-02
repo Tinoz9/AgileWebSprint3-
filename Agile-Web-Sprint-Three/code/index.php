@@ -16,9 +16,9 @@ include_once('navbar.php');
 </div>
 
     <div class="container bg-success" style="border-radius:0.5cm;font-size: 20px;">
-        <p>Team Leader - Satbir Singh</p><br>
-        <p>Back End Developer - Lachlan Smith</p><br>
-        <p>Front End Developer - Tyler Hill</p><br>
+        <p>Team Leader - Tyler Hill</p><br>
+        <p>Back End Developer - Satbir Singh</p><br>
+        <p>Front End Developer - Lachlan Smith</p><br>
         <p>Responsive Website Using Bootstrap Framework</p><br>
     </div>
     <script src = "js/bootstrap.bundle.min.js"></script>
