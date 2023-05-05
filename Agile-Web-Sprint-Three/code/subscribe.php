@@ -1,6 +1,6 @@
 <table class="table bg-success" style="margin-top:20px;">
 				<thead>
-                <th>idSubscriber</th>
+                <th>subscriberEmail</th>
                 <th>subscriberName</th>
                 <th>subscriberEmail</th>
                 <th>subscriberMonthly</th>
@@ -18,7 +18,7 @@
             foreach ($db->query($sql) as $row){
               ?>
             <tr>
-              <td><?php echo $row['idSubscriber'];?></td>
+              <td><?php echo $row['subscriberEmail'];?></td>
               <td><?php echo $row['subscriberName'];?></td>
               <td><?php echo $row['subscriberEmail'];?></td>
               <td><?php echo $row['subscriberMonthly'];?></td>

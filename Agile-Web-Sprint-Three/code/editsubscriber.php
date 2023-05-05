@@ -5,7 +5,7 @@
 		$database = new Connection();
 		$db = $database->open();
 		try{
-            $id = $_GET['idSubscriber'];
+            $id = $_GET['subscriberEmail'];
 			$subscriberName = $_POST['subscriberName'];
 			$subscriberEmail = $_POST['subscriberEmail'];
 			$subscriberMonthly = $_POST['subscriberMonthly'];
@@ -15,7 +15,7 @@
             subscriberEmail = :subscriberEmail,
             subscriberMonthly = :subscriberMonthly,
             subscriberBreaking = :subscriberBreaking
-            WHERE idSubscriber = '$id'";
+            WHERE subscriberEmail = '$id'";
             $step=$db->prepare($sql);
             $step->bindParam(':subscriberName',$subscriberName,PDO::PARAM_STR, 20);
             $step->bindParam(':subscriberEmail',$subscriberEmail,PDO::PARAM_STR, 20);

@@ -1,5 +1,5 @@
 <?php include_once('connection.php'); ?>
-<div class="modal fade" id="editsubscriber_<?php echo $row['idSubscriber']; ?>" tabindex="-1">
+<div class="modal fade" id="editsubscriber_<?php echo $row['subscriberEmail']; ?>" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -7,13 +7,13 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
-                    <form method="POST" action="editsubscriber.php?idSubscriber=<?php echo $row['idSubscriber']; ?>" enctype="multipart/form-data">
+                    <form method="POST" action="editsubscriber.php?subscriberEmail=<?php echo $row['subscriberEmail']; ?>" enctype="multipart/form-data">
                         <div class="row form-group" style="margin-bottom:0.8rem;">
                             <div class="col-sm-4">
-                                <label class="control-label" style="position:relative; top:7px;">Subscriber ID:</label>
+                                <label class="control-label" style="position:relative; top:7px;">Subscriber Email:</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="idSubscriber" value="<?php echo $row['idSubscriber']; ?>" readonly>
+                                <input type="text" class="form-control" name="subscriberEmail" value="<?php echo $row['subscriberEmail']; ?>">
                             </div>
                         </div>
                         <div class="row form-group" style="margin-bottom:0.8rem;">
@@ -22,14 +22,6 @@
                             </div>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" name="subscriberName" value="<?php echo $row['subscriberName']; ?>">
-                            </div>
-                        </div>
-                        <div class="row form-group" style="margin-bottom:0.8rem;">
-                            <div class="col-sm-4">
-                                <label class="control-label" style="position:relative; top:7px;">Subscriber Email:</label>
-                            </div>
-                            <div class="col-sm-8">
-                                <input type="email" class="form-control" name="subscriberEmail" value="<?php echo $row['subscriberEmail']; ?>" pattern=".+@gmail\.com">
                             </div>
                         </div>
                         <div class="row form-group" style="margin-bottom:0.8rem;">

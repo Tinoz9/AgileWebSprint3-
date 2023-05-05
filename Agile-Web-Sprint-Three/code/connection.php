@@ -3,8 +3,8 @@
 Class Connection{
  
 	private $server = "mysql:host=localhost;dbname=sprint3db";
-	private $username = "adminer";
-	private $password = "P@ssw0rd";
+	private $username = "root";
+	private $password = "";
 	private $options  = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,);
 	protected $conn;
  	

@@ -12,21 +12,23 @@
 			$type2=$_POST['subscriberEmail'];
 			$type3=$_POST['subscriberMonthly'];
 			$type4=$_POST['subscriberBreaking'];
-			$query="Insert Into subscriberstable (subscriberName, subscriberEmail, subscriberMonthly, subscriberBreaking)
-    		Values (:subscriberName, :subscriberEmail, :subscriberMonthly, :subscriberBreaking)";
-			$step=$db->prepare($query);
-			$step->bindParam(':subscriberName',$type1,PDO::PARAM_STR, 20);
-			$step->bindParam(':subscriberEmail',$type2,PDO::PARAM_STR, 20);
-			$step->bindParam(':subscriberMonthly',$type3,PDO::PARAM_INT, 20);
-			$step->bindParam(':subscriberBreaking',$type4,PDO::PARAM_INT, 20);
-			if($step->execute()){
-               $_SESSION['message'] = 'Subscriber added successfully';
-			}
-			else{
-			$_SESSION['message']  = 'Not able to add data please contact Admin ';
+			if(!isset($type3) && !isset($type4)) {
+				$_SESSION['message'] = 'You have not chosen to subscribe to any material';
+			} else {
+				$query="Insert Into subscriberstable (subscriberName, subscriberEmail, subscriberMonthly, subscriberBreaking)
+				Values (:subscriberName, :subscriberEmail, :subscriberMonthly, :subscriberBreaking)";
+				$step=$db->prepare($query);
+				$step->bindParam(':subscriberName',$type1,PDO::PARAM_STR, 20);
+				$step->bindParam(':subscriberEmail',$type2,PDO::PARAM_STR, 20);
+				$step->bindParam(':subscriberMonthly',$type3,PDO::PARAM_INT, 20);
+				$step->bindParam(':subscriberBreaking',$type4,PDO::PARAM_INT, 20);
+				if($step->execute()){
+					$_SESSION['message'] = 'You have subscribed';
+				} else{
+					$_SESSION['message']  = 'Not able to add data please contact Admin ';
 				}
 			}
-			catch(PDOException $e){
+			} catch(PDOException $e){
 			$_SESSION['message'] = $e->getMessage();
 			}
 

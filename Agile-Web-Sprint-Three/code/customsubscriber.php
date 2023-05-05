@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -21,7 +24,6 @@
 					<a href="#removesubscriberModal" role="button" class="btn btn-lg btn-success" data-bs-toggle="modal"><span><i class="fa fa-minus"></i></span>   UNSUBSCRIBE</a>
 				</div>
 				<?php 
-					session_start();
 					if(isset($_SESSION['message'])){
 						?>
 						<div class="alert alert-info text-center" style="margin-top:20px;">

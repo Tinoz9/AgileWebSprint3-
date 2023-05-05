@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -15,7 +18,6 @@
             <h1 class="page-header text-center">Select Appropriate Button to Make Changes in Subscriber Details</h1>
             <div class="row">
                 <?php 
-                    session_start();
                     if(isset($_SESSION['message'])){
                         ?>
                         <div class="alert alert-info text-center" style="margin-top:20px;">
@@ -26,9 +28,11 @@
                     }
                 ?>
             </div>
+            <div class="col-sm-10">
+                <a class="navbar-brand" href="emailTest.php" style="color:white; font-size: 20px;"> Email Test </a>
+            </div>
             <table class="table bg-success" style="margin-top:20px;">
                 <thead>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Monthly</th>
@@ -47,14 +51,29 @@
                             foreach ($db->query($sql) as $row) {
                                 ?>
                                 <tr>
-                                    <td><?php echo $row['idSubscriber']; ?></td>
                                     <td><?php echo $row['subscriberName']; ?></td>
                                     <td><?php echo $row['subscriberEmail'];?></td>
-                                    <td><?php echo $row['subscriberMonthly']; ?></td>
-                                    <td><?php echo $row['subscriberBreaking']; ?></td>
+                                    <td>
+                                        <?php  
+                                            if ($row['subscriberMonthly'] == 1) {
+                                                echo "Subscribed";
+                                            } else {
+                                                echo "Not Subscribed =(";
+                                            }
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php  
+                                            if ($row['subscriberBreaking'] == 1) {
+                                                echo "Subscribed";
+                                            } else {
+                                                echo "Not Subscribed =(";
+                                            }
+                                        ?>
+                                    </td>
 									<td>
-						    			<a href="#editsubscriber_<?php echo $row['idSubscriber'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
-						    			<a href="#deletesubscriber_<?php echo $row['idSubscriber']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
+						    			<a href="#editsubscriber_<?php echo $row['subscriberEmail'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
+						    			<a href="#deletesubscriber_<?php echo $row['subscriberEmail']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
 						    		</td>
                                     <?php
 										include('editsubscribermodal.php');
