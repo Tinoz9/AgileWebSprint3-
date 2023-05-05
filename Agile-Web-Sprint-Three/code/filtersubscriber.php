@@ -19,6 +19,7 @@ include_once('navbar.php');
         <th>Email</th>
         <th>Monthly</th>
         <th>Breaking</th>
+        <th>Actions</th>
     </thead>
     <tbody>
 
@@ -56,6 +57,16 @@ include_once('navbar.php');
                 }
             ?>
         </td>
+        <td>
+            <a href="#editsubscriber_<?php echo $row['subscriberEmail'];?>" class="btn btn-primary btn-sm" data-bs-toggle="modal"><span><i class="fa fa-edit"></i></span> Edit</a>
+            <a href="#deletesubscriber_<?php echo $row['subscriberEmail']; ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal"><span><i class="fa fa-trash"></i></span> Delete</a>
+        </td>
+        <?php
+            include('editsubscribermodal.php');
+        ?>
+        <?php
+            include('deletesubscribermodal.php');
+        ?>
         </tr>
         <?php
         }

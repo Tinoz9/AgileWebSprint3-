@@ -46,7 +46,7 @@
                         </div>
                         <div class="modal-footer" style="margin-bottom:0.8rem;">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" name = "addsubscriber" class="btn bg-success">Save</button>
+                            <button type="submit" name = "addsubscriber" class="btn bg-success">Subscribe</button>
                         </div> 
                     </form>
                 </div>
