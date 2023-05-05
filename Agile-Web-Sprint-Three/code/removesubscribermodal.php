@@ -17,7 +17,7 @@
                                 <label class="control-label" style="position: relative; top: 7px;">Subscriber Email:</label>
                             </div>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name = "subscriberEmail">
+                                <input type="email" class="form-control" name = "subscriberEmailName">
                             </div>
                         </div>
                         <div class="modal-footer" style="margin-bottom:0.8rem;">
